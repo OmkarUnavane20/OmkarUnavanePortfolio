@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omkar Unavane — Résumé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1d24;
+        --muted: #4a5060;
+        --accent: #b8860b;
+        --rule: #d8dce6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Source Sans 3", system-ui, sans-serif;
+        font-size: 11pt;
+        line-height: 1.45;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      .page {
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0.65in 0.75in 0.55in;
+      }
+
+      header {
+        text-align: center;
+        padding-bottom: 0.85rem;
+        margin-bottom: 0.9rem;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      h1 {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 1.65rem;
+        font-weight: 700;
+        margin: 0 0 0.2rem;
+        letter-spacing: -0.02em;
+      }
+
+      .tagline {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--muted);
+        margin: 0 0 0.65rem;
+      }
+
+      .contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem 1rem;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+
+      .contact-row a {
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .contact-row a:hover {
+        text-decoration: underline;
+      }
+
+      .contact-row span {
+        white-space: nowrap;
+      }
+
+      section {
+        margin-bottom: 0.85rem;
+      }
+
+      section:last-of-type {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        margin: 0 0 0.45rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      p {
+        margin: 0 0 0.5rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .entry {
+        margin-bottom: 0.65rem;
+      }
+
+      .entry:last-child {
+        margin-bottom: 0;
+      }
+
+      .entry-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.25rem 1rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .entry-head h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .entry-meta {
+        font-size: 0.88rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .entry-sub {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--muted);
+        margin: 0 0 0.35rem;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.15rem;
+      }
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 7rem 1fr;
+        gap: 0.35rem 1rem;
+        font-size: 0.95rem;
+      }
+
+      .skills-grid dt {
+        font-weight: 700;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .skills-grid dd {
+        margin: 0;
+      }
+
+      .back {
+        margin-top: 1.25rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--rule);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      .back a {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      @media print {
+        .back {
+          display: none;
+        }
+
+        .page {
+          padding: 0.4in 0.55in;
+        }
+
+        a[href^="http"]::after {
+          content: "";
+        }
+      }
+
+      @media (max-width: 520px) {
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .skills-grid dt {
+          margin-top: 0.35rem;
+        }
+
+        .skills-grid dt:first-child {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Omkar Unavane</h1>
+        <p class="tagline">
+          Diploma in Computer Technology · Full-stack Java trainee
+        </p>
+        <div class="contact-row">
+          <span
+            ><a href="mailto:unavaneomkar@gmail.com">unavaneomkar@gmail.com</a></span
+          >
+          <span
+            ><a href="tel:+919699665764">+91&nbsp;96996&nbsp;65764</a></span
+          >
+          <span
+            ><a
+              href="https://www.linkedin.com/in/omkar-unavane-920660333/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            ></span
+          >
+          <span
+            ><a href="index.html">Portfolio</a></span
+          >
+        </div>
+      </header>
+
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Profile</h2>
+        <p class="muted">
+          Second-year diploma student in Computer Technology with hands-on
+          industrial training in full-stack Java development. Strong interest in
+          how software, databases, and services work together. Comfortable with
+          structured coursework, lab work, and internship-style delivery under
+          guidance.
+        </p>
+      </section>
+
+      <section aria-labelledby="edu-heading">
+        <h2 id="edu-heading">Education</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Sanjivani KBP Polytechnic</h3>
+            <span class="entry-meta">Second year · In progress</span>
+          </div>
+          <p class="entry-sub">Diploma in Computer Technology</p>
+          <ul>
+            <li>
+              Coursework in programming, databases, web fundamentals, and
+              problem-solving for software development roles.
+            </li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Depaul English Medium High School</h3>
+            <span class="entry-meta">2023</span>
+          </div>
+          <p class="entry-sub">Secondary School Certificate (10th standard)</p>
+          <ul>
+            <li>Completed with A grade.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="exp-heading">
+        <h2 id="exp-heading">Experience &amp; training</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Sumego Infotech Pvt. Ltd.</h3>
+            <span class="entry-meta">Nashik · 90-day programme</span>
+          </div>
+          <p class="entry-sub">
+            Internship &amp; industrial training — Full-stack Java
+          </p>
+          <ul>
+            <li>
+              Practical training in Java-based full-stack development, including
+              backend concepts, integration, and software engineering practices.
+            </li>
+            <li>
+              Training aligned with diploma studies to build industry-relevant
+              habits and technical depth.
+            </li>
+            <li><em>Status:</em> In progress.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Technical skills</h2>
+        <dl class="skills-grid">
+          <dt>Languages</dt>
+          <dd>C, C++, Java, Python (basics)</dd>
+          <dt>Concepts</dt>
+          <dd>Object-oriented programming</dd>
+          <dt>Databases</dt>
+          <dd>Oracle DBMS</dd>
+          <dt>Web</dt>
+          <dd>Web development fundamentals</dd>
+          <dt>Exploring</dt>
+          <dd>
+            Embedded systems, backend technologies, application development
+          </dd>
+        </dl>
+      </section>
+
+      <p class="back">
+        <a href="index.html">← Back to portfolio</a>
+        · Use your browser’s Print → Save as PDF to export this page.
+      </p>
+    </div>
+  </body>
+</html>
